@@ -3,57 +3,115 @@
 
 Slide show for the scipy 2014 conference
 
-* Title								      :slide:
+* Title                                                               :slide:
 #+BEGIN_SRC emacs-lisp-slide
 (org-show-animate '("A success story in using Python" "in a graduate" "chemical engineering course" "John Kitchin" "Carnegie Mellon University"))
 #+END_SRC
 
-* Course summary						      :slide:
+* About me                                                            :slide:
 
-- New (1st time taught, blank slate) Master's core course in Chemical Engineering
- - "Chemical and Reactive Systems
- - Part of a new program with a heavy emphasis on computational problem solving
+- B.S. Chemistry, M.S. Materials Science, Ph.D. Chemical Engineering
 
-- 62 Master's students taking the course
+- At the time of the course
 
-- Course content is heavy in computing, engineering design
+  - Associate Professor in Chemical Engineering
+    - tenure/promotion package turned in 
 
-- All assignments are python scripts that solve some engineering problem
-
-- Students get a department issued Windows 7 laptop
-
-- About 10% use their own Mac or Linux machine anyway
-
-- Each student installed the Enthought Python distribution and MikTeX on their computer
-
-- And a custom python library I wrote for the course
-  - http://github.com/jkitchin/pycse
-
-* About the people						      :slide:
-
-- Me at the time of the course
-  - Associate Professor, tenure/promotion package turned in 
-  - I program for fun, and work
+  - I program for fun, research and work for about 15 years 
     - Python, emacs-lisp
-  - I consider myself a developer and tool maker
-
-  - I have used automation via scripting in research, and work, for about 15 years
 
   - I have used Python in a small graduate course on Molecular Simulation (http://kitchingroup.cheme.cmu.edu/dft-book) for about four years
 
-- The TAs (2) were PhD students from my group who were hand-picked by me because I knew they were technically skilled with the tools I use
+* Course summary                                                      :slide:
 
-  - They have taken courses taught by me using these tools 
-  - They use some of the tools in their research
+- New (1st time taught, blank slate) Master's core course in Chemical Engineering
+  - "Chemical and Reactive Systems"
+  - Part of a new M.S. program with a heavy emphasis on computational problem solving
 
-* Summary of what we did					      :slide:
+- 62 Master's students taking the course
+  - Predominantly international students
+  - Programmming/computing background of students is unknown
+
+- Students get a department issued Windows 7 laptop
+  - About 10-20% use their own Mac or Linux machine anyway
+
+- Department is Matlab dominated
+  - There has never been a core course taught with Python before
+
+* A year-long study of the suitability of Python                      :slide:
+
+- I had previously taught all the course material in MATLAB to undergraduates
+  - So I knew what kinds of problems we needed to solve
+
+- I had previously generated a large set of example problems and solutions in a Matlab blog
+  - http://matlab.cheme.cmu.edu
+  - programming, math and chemical engineering examples
+
+- I spent about a year reproducing that work in Python
+    PYCSE (http://kitchingroup.cheme.cmu.edu/pycse)
+
+    [[file:~/Dropbox/books/pycse/pycse.org][open PYCSE]]
+
+- If you were wondering if Python can replace Matlab for Science and Engineering
+  - *It can*
+
+* Python vs. Matlab                                                   :slide:
+
+- I can do /almost/ everything in Python that I did in Matlab
+  - Python + numpy + scipy + matplotlib
+  - Enthought Canopy made installation easy
+
+  - I added these capabilities
+    - some statistical functions for confidence intervals
+    - event handling in ODE solvers
+    - some BVP code
+    - publish to pdf (analog of Matlab publishing)
+
+- There are differences
+  - Python is less uniform in function signatures. Inconsistent in some cases.
+  - Matlab has more advanced features in places
+
+Bottom line: It is totally reasonable to use Python in science and engineering education and research! (as long as there are scientific Python distributions that package it!)
+
+
+* My goals in using Python in class                                   :slide:
+
+1. Practice using Python early and often
+  - Not possible with weekly assignments
+
+2. I wanted to show and use code in class easily
+  - 100+ examples 
+
+3. I wanted to provide rapid feedback (1-2 days)
+  - This is not possible with paper assignments
+
+4. Minimize redundant and tedious work for instructors
+  - e.g. copying grades from assignments to gradebook
+
+5. I wanted a record of everyone's work
+  - For future analysis/assessment of learning objectives
+
+6. Maximize use of tools I regularly use in research
+  - Python, emacs, org-mode
+
+
+* Summary of what we did - Part I                                     :slide:
+
+- Each student installed on their own computer
+  - Enthought Canopy
+  - MikTeX
+  - pycse (pip install pycse)  - my additions
+
 - Used a novel approach to integrate Python code within lecture notes
+  - enabled over 110 examples to be interleaved in the notes with context
 
 - Used metadata-enhanced, interactive PDF documents to facilitate grading
-  - Grading widget
-  - Written feedback on PDFs via tablet PC
+  - Embedded rading widget in PDF
+  - Written feedback on PDFs via tablet PC 
 
 - Used automation scripting to do tedious file operations, grade collection and calculations, etc...
+
+* Summary of what we did - Part II                                    :slide:
 
 - Used a cloud application (Box.com) with built-in authentication and permissions-based access to facilitate 
   - Course information dissemination 
@@ -63,39 +121,46 @@ Slide show for the scipy 2014 conference
   - We have a subscription to box.com and every student automatically gets 50 GB storage
   - Built-in authentication through university
   - Built-in permissions
+  - Built-in collaboration (students and instructors)
   - Built-in synchronization 
   - FERPA compliant
+  - Restful API for automation
 
-* Basic Course Workflow						      :slide:
+* About the TAs                                                       :slide:
+
+- The TAs (2) were PhD students from my group
+- I hand-picked them because I knew they were technically skilled with the tools we would use in class
+
+  - They have taken courses taught by me using these tools 
+  - They use some of the tools in their research
+
+- Having skilled assistants was very important!
+
+* Course setup                                                        :slide:
 
 - Lecture materials prepared in advance and distributed to students via box.com
   - [[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.org][Lecture notes]] prepared in orgmode (see https://github.com/jkitchin/scipy2013)
-  - Exported to [[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.pdf][PDF slides]]
+    - Youtube: http://bit.ly/kitchin-scipy-2013 (13,600+ views!)
 
-- The notes integrate text, equations, figures and code
+  - Lectures transition from "simple" Python to "advanced" topics
+
+  - The notes integrate text, equations, figures and code
+
+  - Exported to [[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.pdf][PDF slides]]
 
 - I annotated the PDF slides in class with a tablet
 
 - Annotated notes are saved in box.com and available to students after class
 
-- Students are supported by PYCSE (http://kitchingroup.cheme.cmu.edu/pycse)
-
-[[file:~/Dropbox/books/pycse/pycse.org][open PYCSE]]
-
-- If you were wondering if Python can replace Matlab for Science and Engineering
-  - It can.
-
-* An example of the notes					      :slide:
+* An example of the notes                                             :slide:
 
 - Rendered math
-  What is $\xi_{\text{max}}$?
-
 
 - Actual code used to solve problems
   - Line numbers and syntax highlighting make it easy to read
   - I annotated in class
 
-- Actual output from running the code in the notes
+- Actual output from running the code in the notes [[elisp:(progn (forward-line 3) (org-ctrl-c-ctrl-c))][Try it.]]
 
 #+BEGIN_SRC python
 import numpy as np
@@ -114,12 +179,75 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./notes.png]]
 
-* Box.com setup							      :slide:
+* About the assignments				     :sl
 
+- All assignments are python scripts that are "published" to pdf files
+
+- It captures the code output and figures on the student's computer
+  - creates a javascript-enriched pdf
+    - with information about the student,
+    - assignment and a grade feature
+
+- Students generate the pdf with a single command in the iPython console:
+  - "publish my-script.py" 
+
+- The students upload their published pdf to Box.com in their personal folder
+
+- The pdf is automatically named: <andrewid>-<course>-<assignment>.pdf
+  - This is important for streamlining the grading process using automation
+
+[[./metadata-enriched-pdf.png]]
+  - The publish script was partly written by me (adapted from http://gael-varoquaux.info/computers/pyreport/)
+
+* Grading the assignments                                             :slide:
+
+- After the assignment deadline
+  - Copy all the student assignments to the private gradebook folder
+  - Ensures we have a copy the students cannot access or change
+
+- The script generates a list of two links in an org-mode file in Emacs (a powerful text editor).
+  - The first link opens the file for grading 
+  - This just makes it easy for us to navigate
+
+- Handwritten annotation on a tablet PC 
+  - We use Bluebeam Revu for editing PDF with a tablet. It is the best we have found so far.
+  - It is not open-source
+
+- The second link in Emacs is used to 
+  - validate the grade, 
+  - copy the graded assignment back to the student folder,
+  - record the grade in the gradebook
+  - generate a grade report for the student
+  - Copy the pdf and grade report back to the student folder
+
+- A final link creates a summary of the assignment after everything is graded
+
+[[./grading-workflow.png]]
+
+* The gradebook is generated from the graded PDF files                :slide:
+
+- A script walks through the directories and pulls the grade from each student's assignments
+
+- It generates a "gradebook" in Emacs
+
+- Each grade is a link that opens the assignment it refers to
+
+- No need to copy grades from assignment to gradebook
+  - Less room for errors
+  - Done grading sooner
+
+- Similar functions for computing student grade reports
+
+[[./gradebook.png]]
+
+* Box.com setup                                                       :slide:
 - This setup is important as permissions propagate "downhill". You can grant more permissions inside a folder, but not take them away. 
+
+- It pays to think all the way through the organization of files early!
 
 - Everything was done using the box.com api and custom, fit for purpose code
  - python module (https://github.com/jkitchin/box-course)
+   - Requires a developer token (two step authentication)
  - create folders
  - set permissions
  - push files to folders
@@ -138,130 +266,94 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./box-setup.png]]
 
-* About the homeworks						      :slide:
-- All homeworks are python scripts that are "published" to pdf files
-  - The publish script was partly written by me (adapted from http://gael-varoquaux.info/computers/pyreport/)
+* Successes - Students                                                :slide:
 
-- It captures the code output and figures on the student's computer
-  - Generates LaTeX code
-  - creates a javascript-enriched pdf
-    - with information about the student,
-    - assignment and a grade feature
+- By the end of the semester students were solving sophisticated chemical engineering problems with Python
 
-- Students generate the pdf with a single command in the iPython console:
-  - "publish my-script.py" 
+- Students are getting the feedback more often
+  - Students communicate with us about the feedback by email and Box.com comments pretty often
+  - Homework quality quickly rose
+  - Getting feedback early and often on small problems was helpful
 
-- The students upload their published pdf to Box.com in their personal folder
+- My course evaluations were the same as in other courses I have taught
+  - and as good as other courses in the department
 
-- The pdf is automatically named: <andrewid>-<course>-<assignment>.pdf
-  - This is important for streamlining the grading process using automation
+* Successes - Course                                                  :slide:
 
-[[./metadata-enriched-pdf.png]]
-
-* Grading the assignments					      :slide:
-- After the assignment deadline
-  - Copy all the student assignments to the private gradebook folder
-  - Ensures we have a copy the students cannot access or change
-
-- The script generates a list of two links in an org-mode file in Emacs (a powerful text editor).
-  - The first link opens the file for grading 
-  - This just makes it easy for us to navigate
-
-- Grading occurs on a tablet PC where we can annotate the assignment with handwritten notes and assign a grade via the grading widget
-  - We use Bluebeam Revu for editing PDF with a tablet. It is the best we have found so far.
-  - It is not open-source
-
--The second link in Emacs is used to 
-  - validate the grade, 
-  - copy the graded assignment back to the student folder,
-  - record the grade in the gradebook
-  - generate a grade report for the student
-  - Copy the pdf and grade report back to the student folder
-
-- A final link creates a summary of the assignment after everything is graded
-
-[[./grading-workflow.png]]
-
-* The gradebook is generated from the graded PDF files		      :slide:
-- A script walks through the directories and pulls the grade from each student's assignments
-
-- It generates a "gradebook" in Emacs
-
-- Each grade is a link that opens the assignment it refers to
-
-- No need to copy grades from assignment to gradebook
-  - Less room for errors
-  - Done grading sooner
-
-- Similar functions for computing student grade reports
-
-[[./gradebook.png]]
-
-* Successes!							      :slide:
 - Homework collection is trivial
   - Essentially clicking links or command line utilities
 
 - Ability to provide feedback enhanced by using tablet
-  - The grading widget turned out to be a time saver on the tablet (less clicking)
-
-- Students are getting the feedback more often
-  - Students communicate with us about the feedback by email and Box.com comments pretty often
-  - Homework quality has quickly risen
-  - Getting feedback early and often on small problems was helpful
+  - The grading widget turned out to be a time/error saver 
 
 - Grading 60+ assignments takes 3-4 hours
+  - Assignments are small in scope, and frequent
   - 2-3 assignments per week is spread over 3 people
 
 - Ran timed in-class, computer-based quizzes and exams
+  - We ended up making these totally open, timed problems
 
 - Grade aggregation is mostly trivial (i.e. a command)
 
 - Running the course is pretty fun!
 
-* Downsides to this approach 					      :slide:
+- Deep integration of research and education tools
+
+* Some lessons learned                                                :slide:
 
 - I spent a lot of time on the course infrastructure
-  - Some of that is just development expense
-  - I think it is worth doing though
-  - I had taught an undergraduate version of this course three times previously
-  - Still the development time came somewhat at the expense of content development
+  - Somewhat at the expense of content and personal time
 
-- Students were frustrated by regular changes due to development
-  - That is life, but it showed up in the comments in the course evaluations
+- Regular development changes = Student frustration
+  - This showed up in the comments in the course evaluations
 
-- Some students had trouble learning Python /and/ Reaction Engineering
-  - To be fair, they also struggled with Matlab in another course
+- Some had trouble learning Python /and/ Reaction Engineering
+  - They also struggled with Matlab in another course
 
 - Some students wanted more Reaction Engineering, and less Python
   - This is a tradeoff in tools vs. content
     - You cannot learn computational problem solving /without/ the tools!
     - My philosophy is teach with the tools they will be using
     - And make them use the tools
-* Things that are still tedious with box.com			      :slide:
-- Setting up the Box.com course site 
-  - A lot of this has been automated via the box.com api
+
+* Things that are still tedious with Box.com                          :slide:
 
 - Box Sync is very slow sometimes 
+  - We had 60+ users syncing at peak times
   - With many files (100s) Sync can take 10-60 minutes sometimes, especially if you have a computer has been off for a day or more
-  - Or TAs with lots of personal files on Box.com (which had to sync onto the dedicated tablet PC)
 
 - Dealing with Box Sync Conflicts
-  - We have had a fair number of Conflicts 
+  - We have had a fair number of conflicts (simultaneous file changes)
   - Nothing serious, but enough to be annoying
 
-- No Linux support for box.com  ;)
+- Intermittent encryption errors with students uploading
+  - Resulted in late assignments in time sensitive situations (quizzes, exams)
+  - Totally stressed out students
+
+* More issues with Box.com
+
+- The box.com api is great, but slow
+  - Many http requests back and forth
+    - My implementation is serial, and slow
+
+  - Complicated authentication with token
+    - Requres a web-server
+  - Not suitable for more than one instructor 
+    - Token gives access to whole box account
+
+- No Linux support for box.com (web interface works, sync does not)
 
 - We will not use box.com again
 
-* Unresolved grading issues					      :slide:
+* Unresolved grading issues                                           :slide:
 
 - Automation of data extraction from PDF is not yet flawless
-  - Some PDFs use compression methods not supported in all python PDF libraries
+  - python libraries do not support all compression methods
     - These do not appear to be actively developed anymore
        - PyPDF2
        - pdfminer
-  - We suspect these were created on Macs, but sometimes it happens on PCs too
   - We have developed fallback plans that use other, slower libraries or programs (pdftk)
+  - We are moving away from this approach
 
 - Student compliance
   - Some students misspell their AndrewID, which leads to ungraded assignments not collected by our automation tools
@@ -269,13 +361,13 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
   - This is a limit of automated approaches
     - If there is a way to mess it up, someone will find it
 
-* Future approach - Part 1 					      :slide:
+* Future approach - Part 1                                            :slide:
 
 - I am teaching the course again this Fall
 
 - I am using Enthought Python + Emacs + git to run the course
   - Setup in advance on the laptops they get from the department
-  - http://github.com/jkitchin/jmax
+  - http://github.com/jkitchin/jmax provides the Emacs environment
 
 - I am running a personal git server with gitolite
   - Students will get private repos for assignments
@@ -285,25 +377,27 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
     - creating assignments
     - collecting assignments
     - feedback and grading assignments
+    - returning assignments
+* Future approach - Part II                                           :slide:
 
-* Future approach - Part II					      :slide:
 - Interactive lectures from Emacs
   - Like this one!
 
 - Students will use Emacs in class and for their assignments
   - Active learning with integrated notes and code
   - "link/menu" driven interactions with git
-    - click to clone repo
-    - click to commit and push
-    - click to pull repo  
+    - click to clone repo/commit and push/pull repo  
   
-- All assignments will be written in org-mode
+- All assignments will be written in org-mode (plain text)
   - With grade storage in the files
 
 - Totally open-source solution
-  - Broadly useful for a variety of courses
+  - I call this solution "Techela"
+    - Technology enhanced learning and assessment
+    - After all, if the University is a fountain of knowledge, one should drink from it
 
-- How will it go?
+  http://github.com/jkitchin/jmax
+* How will it go?                                                     :slide:
 
 #+BEGIN_SRC python
 import datetime
@@ -312,7 +406,7 @@ now = datetime.datetime.now()
 print "Check back in {0}!".format(now.year + 1)
 #+END_SRC
 
-* End 								      :slide:
+* End                                                                 :slide:
 #+BEGIN_SRC emacs-lisp-slide
 (org-show-animate '("Thank you for your attention!"  "Questions?" "http://github.com/jkitchin/scipy-2014"))
 #+END_SRC
