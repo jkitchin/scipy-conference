@@ -3,33 +3,36 @@
 
 Slide show for the scipy 2014 conference
 
-* Title                                                               :slide:
+* Title								      :slide:
 #+BEGIN_SRC emacs-lisp-slide
-(org-show-animate '("A success story in using Python" "in a graduate" "chemical engineering course" "John Kitchin" "Carnegie Mellon University"))
+(org-show-animate '("A success story in using Python" "in a graduate" "chemical engineering course" "John Kitchin" "Carnegie Mellon University" "July 10, 2014" "SciPy 2014"))
 #+END_SRC
 
-* About me                                                            :slide:
+* About me							      :slide:
 
 - B.S. Chemistry, M.S. Materials Science, Ph.D. Chemical Engineering
+
+- I program for fun, research and work for about 15 years 
+  - Python, emacs-lisp
+
+- I have used Python in a small graduate course on Molecular Simulation (http://kitchingroup.cheme.cmu.edu/dft-book) for about four years
 
 - At the time of the course
 
   - Associate Professor in Chemical Engineering
     - tenure/promotion package turned in 
 
-  - I program for fun, research and work for about 15 years 
-    - Python, emacs-lisp
+  - Today, I am 10 days into being a tenured, full professor!
 
-  - I have used Python in a small graduate course on Molecular Simulation (http://kitchingroup.cheme.cmu.edu/dft-book) for about four years
+* Course summary						      :slide:
 
-* Course summary                                                      :slide:
-
-- New (1st time taught, blank slate) Master's core course in Chemical Engineering
+- Brand new Master's core course in Chemical Engineering
   - "Chemical and Reactive Systems"
   - Part of a new M.S. program with a heavy emphasis on computational problem solving
 
 - 62 Master's students taking the course
   - Predominantly international students
+  - Mostly chemical engineering backgrounds, but some others
   - Programmming/computing background of students is unknown
 
 - Students get a department issued Windows 7 laptop
@@ -38,7 +41,7 @@ Slide show for the scipy 2014 conference
 - Department is Matlab dominated
   - There has never been a core course taught with Python before
 
-* A year-long study of the suitability of Python                      :slide:
+* A year-long study of the suitability of Python		      :slide:
 
 - I had previously taught all the course material in MATLAB to undergraduates
   - So I knew what kinds of problems we needed to solve
@@ -55,35 +58,34 @@ Slide show for the scipy 2014 conference
 - If you were wondering if Python can replace Matlab for Science and Engineering
   - *It can*
 
-* Python vs. Matlab                                                   :slide:
+* Python vs. MATLAB						      :slide:
 
 - I can do /almost/ everything in Python that I did in Matlab
   - Python + numpy + scipy + matplotlib
   - Enthought Canopy made installation easy
 
-  - I added these capabilities
+  - I added these capabilities through PYCSE
     - some statistical functions for confidence intervals
-    - event handling in ODE solvers
-    - some BVP code
+    - event handling in ODE solvers, some BVP code
     - publish to pdf (analog of Matlab publishing)
 
 - There are differences
   - Python is less uniform in function signatures. Inconsistent in some cases.
   - Matlab has more advanced features in places
+  - The differences get smaller everyday
 
 Bottom line: It is totally reasonable to use Python in science and engineering education and research! (as long as there are scientific Python distributions that package it!)
 
+* My goals in using Python in class				      :slide:
 
-* My goals in using Python in class                                   :slide:
+1. Practice using Python early and often _solving engineering problems_ locally on their own computers
+  - Not possible with typical weekly assignments
 
-1. Practice using Python early and often
-  - Not possible with weekly assignments
-
-2. I wanted to show and use code in class easily
-  - 100+ examples 
-
-3. I wanted to provide rapid feedback (1-2 days)
+2. I wanted to provide rapid feedback (1-2 days)
   - This is not possible with paper assignments
+
+3. I wanted to show and use code in class easily
+  - 100+ examples spread over 28 lectures
 
 4. Minimize redundant and tedious work for instructors
   - e.g. copying grades from assignments to gradebook
@@ -94,24 +96,23 @@ Bottom line: It is totally reasonable to use Python in science and engineering e
 6. Maximize use of tools I regularly use in research
   - Python, emacs, org-mode
 
-
-* Summary of what we did - Part I                                     :slide:
+* Summary of what we did - Part I				      :slide:
 
 - Each student installed on their own computer
   - Enthought Canopy
   - MikTeX
   - pycse (pip install pycse)  - my additions
 
-- Used a novel approach to integrate Python code within lecture notes
+- Used Emacs + org-mode to integrate Python code within lecture notes
   - enabled over 110 examples to be interleaved in the notes with context
 
 - Used metadata-enhanced, interactive PDF documents to facilitate grading
-  - Embedded rading widget in PDF
+  - Embedded grading widget in the PDF file
   - Written feedback on PDFs via tablet PC 
 
 - Used automation scripting to do tedious file operations, grade collection and calculations, etc...
 
-* Summary of what we did - Part II                                    :slide:
+* Summary of what we did - Part II				      :slide:
 
 - Used a cloud application (Box.com) with built-in authentication and permissions-based access to facilitate 
   - Course information dissemination 
@@ -120,13 +121,13 @@ Bottom line: It is totally reasonable to use Python in science and engineering e
 - Box.com
   - We have a subscription to box.com and every student automatically gets 50 GB storage
   - Built-in authentication through university
-  - Built-in permissions
+  - Built-in permissions/collaboration model
   - Built-in collaboration (students and instructors)
   - Built-in synchronization 
-  - FERPA compliant
   - Restful API for automation
+  - FERPA compliant
 
-* About the TAs                                                       :slide:
+* About the TAs							      :slide:
 
 - The TAs (2) were PhD students from my group
 - I hand-picked them because I knew they were technically skilled with the tools we would use in class
@@ -136,13 +137,13 @@ Bottom line: It is totally reasonable to use Python in science and engineering e
 
 - Having skilled assistants was very important!
 
-* Course setup                                                        :slide:
+* Course setup							      :slide:
 
-- Lecture materials prepared in advance and distributed to students via box.com
+- Lecture materials prepared in advance and distributed to students via Box.com
   - [[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.org][Lecture notes]] prepared in orgmode (see https://github.com/jkitchin/scipy2013)
     - Youtube: http://bit.ly/kitchin-scipy-2013 (13,600+ views!)
 
-  - Lectures transition from "simple" Python to "advanced" topics
+  - Lectures transition from "[[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.org::*Super%20simple%20stuff][simple]]" Python to "[[file:~/Dropbox/CMU/classes/06-625-chemical-and-reactive-systems/course-notes/course-notes.org::*A%20worked%20example][advanced]]" topics
 
   - The notes integrate text, equations, figures and code
 
@@ -152,9 +153,9 @@ Bottom line: It is totally reasonable to use Python in science and engineering e
 
 - Annotated notes are saved in box.com and available to students after class
 
-* An example of the notes                                             :slide:
+* An example of the notes					      :slide:
 
-- Rendered math
+- Rendered math $\xi_\text{max}$
 
 - Actual code used to solve problems
   - Line numbers and syntax highlighting make it easy to read
@@ -179,9 +180,8 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./notes.png]]
 
-* About the assignments				     :sl
-
-- All assignments are python scripts that are "published" to pdf files
+* About the assignments						      :slide:
+- All assignments are [[file:cstr-pfr-1.py][python scripts]] that are "published" to [[file:example-06-625-cstr-pfr-1_Redacted.pdf][pdf]] files
 
 - It captures the code output and figures on the student's computer
   - creates a javascript-enriched pdf
@@ -199,11 +199,11 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 [[./metadata-enriched-pdf.png]]
   - The publish script was partly written by me (adapted from http://gael-varoquaux.info/computers/pyreport/)
 
-* Grading the assignments                                             :slide:
+* Grading the assignments					      :slide:
 
-- After the assignment deadline
-  - Copy all the student assignments to the private gradebook folder
-  - Ensures we have a copy the students cannot access or change
+- After the due date we run a script
+  - Copy assignments to the private gradebook folder
+  - students cannot access or change this one
 
 - The script generates a list of two links in an org-mode file in Emacs (a powerful text editor).
   - The first link opens the file for grading 
@@ -224,11 +224,11 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./grading-workflow.png]]
 
-* The gradebook is generated from the graded PDF files                :slide:
+* The gradebook is generated from the graded PDF files		      :slide:
 
 - A script walks through the directories and pulls the grade from each student's assignments
 
-- It generates a "gradebook" in Emacs
+- It dynamically generates a "gradebook" in Emacs
 
 - Each grade is a link that opens the assignment it refers to
 
@@ -240,19 +240,21 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./gradebook.png]]
 
-* Box.com setup                                                       :slide:
-- This setup is important as permissions propagate "downhill". You can grant more permissions inside a folder, but not take them away. 
+* Box.com setup							      :slide:
+- Permissions propagate "downhill". You can grant more permissions inside a folder, but not take them away. 
 
 - It pays to think all the way through the organization of files early!
 
 - Everything was done using the box.com api and custom, fit for purpose code
  - python module (https://github.com/jkitchin/box-course)
-   - Requires a developer token (two step authentication)
- - create folders
- - set permissions
- - push files to folders
- - etc...
+   - Requires a developer token (two step authentication with a web server)
+ - With it you can
+   - create folders
+   - set permissions
+   - push files to folders
+   - etc...
 
+[[file+emacs:~/Dropbox/python/box-course/box_course/]]
 
 
 
@@ -266,9 +268,10 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 [[./box-setup.png]]
 
-* Successes - Students                                                :slide:
+* Successes - Students						      :slide:
 
 - By the end of the semester students were solving sophisticated chemical engineering problems with Python
+  file:example-06-625-cstr-pfr-1_Redacted.pdf
 
 - Students are getting the feedback more often
   - Students communicate with us about the feedback by email and Box.com comments pretty often
@@ -278,7 +281,7 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 - My course evaluations were the same as in other courses I have taught
   - and as good as other courses in the department
 
-* Successes - Course                                                  :slide:
+* Successes - Course						      :slide:
 
 - Homework collection is trivial
   - Essentially clicking links or command line utilities
@@ -299,7 +302,7 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 - Deep integration of research and education tools
 
-* Some lessons learned                                                :slide:
+* Some lessons learned						      :slide:
 
 - I spent a lot of time on the course infrastructure
   - Somewhat at the expense of content and personal time
@@ -316,7 +319,7 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
     - My philosophy is teach with the tools they will be using
     - And make them use the tools
 
-* Things that are still tedious with Box.com                          :slide:
+* Things that are still tedious with Box.com			      :slide:
 
 - Box Sync is very slow sometimes 
   - We had 60+ users syncing at peak times
@@ -330,9 +333,9 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
   - Resulted in late assignments in time sensitive situations (quizzes, exams)
   - Totally stressed out students
 
-* More issues with Box.com
+* More issues with Box.com					      :slide:
 
-- The box.com api is great, but slow
+- The box.com api is pretty good and feature complete, but slow
   - Many http requests back and forth
     - My implementation is serial, and slow
 
@@ -345,14 +348,16 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 
 - We will not use box.com again
 
-* Unresolved grading issues                                           :slide:
+* Unresolved grading issues					      :slide:
 
 - Automation of data extraction from PDF is not yet flawless
   - python libraries do not support all compression methods
     - These do not appear to be actively developed anymore
        - PyPDF2
        - pdfminer
+
   - We have developed fallback plans that use other, slower libraries or programs (pdftk)
+
   - We are moving away from this approach
 
 - Student compliance
@@ -361,11 +366,11 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
   - This is a limit of automated approaches
     - If there is a way to mess it up, someone will find it
 
-* Future approach - Part 1                                            :slide:
+* Future approach - Part 1					      :slide:
 
 - I am teaching the course again this Fall
 
-- I am using Enthought Python + Emacs + git to run the course
+- I am using Emacs + org-mode + Python + git to run the course
   - Setup in advance on the laptops they get from the department
   - http://github.com/jkitchin/jmax provides the Emacs environment
 
@@ -373,12 +378,10 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
   - Students will get private repos for assignments
   - We can change repo permissions from RW to R as needed
   - Authentication with ssh keys
-  - Automation via emacs-lisp for deep integration with Emacs
-    - creating assignments
-    - collecting assignments
-    - feedback and grading assignments
-    - returning assignments
-* Future approach - Part II                                           :slide:
+  - Automation via emacs-lisp
+    - creating/collecting/grading/returning assignments
+
+* Future approach - Part II					      :slide:
 
 - Interactive lectures from Emacs
   - Like this one!
@@ -386,7 +389,7 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
 - Students will use Emacs in class and for their assignments
   - Active learning with integrated notes and code
   - "link/menu" driven interactions with git
-    - click to clone repo/commit and push/pull repo  
+    - git will work behind the scenes
   
 - All assignments will be written in org-mode (plain text)
   - With grade storage in the files
@@ -395,18 +398,23 @@ print 'The maximum extent is {0} moles.'.format(min(- M0 / alpha))
   - I call this solution "Techela"
     - Technology enhanced learning and assessment
     - After all, if the University is a fountain of knowledge, one should drink from it
-
   http://github.com/jkitchin/jmax
-* How will it go?                                                     :slide:
+* How will it go?						      :slide:
+
+Write a python script that tells you what year it will be, one year from now.
 
 #+BEGIN_SRC python
 import datetime
 now = datetime.datetime.now()
 
-print "Check back in {0}!".format(now.year + 1)
+print("Check back in {0}!".format(now.year + 2))
 #+END_SRC
 
-* End                                                                 :slide:
+#+RESULTS:
+: Check back in 2016!
+
+
+* End								      :slide:
 #+BEGIN_SRC emacs-lisp-slide
 (org-show-animate '("Thank you for your attention!"  "Questions?" "http://github.com/jkitchin/scipy-2014"))
 #+END_SRC
